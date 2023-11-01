@@ -1,7 +1,13 @@
-GET method, get all amenities of a place
+GET method, retrieve a amenities base on place
 ---
 tags:
-  - Amenities
+  - Place_Amenities
+parameters:
+  - name: amenity_id
+    in: path
+    type: string
+    required: true
+    description: amenity id
 responses:
   200:
     description: Succsesful resquest
@@ -23,3 +29,6 @@ responses:
           name:
             type: string
             description: Place name
+
+  404:
+    description: Place not found
